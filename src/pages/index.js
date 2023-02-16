@@ -1,18 +1,20 @@
-import AccountInfo from './components/AccountInfo'
-import Audience from './components/Audience'
-import Followers from './components/Followers'
-import Navbar from './components/Navbar'
+import AccountInfo from '@/components/AccountInfo'
+import Audience from '@/components/Audience'
+import Followers from '@/components/Followers'
+import Navbar from '@/components/Navbar'
 import 'react-circular-progressbar/dist/styles.css';
-import Score from './components/Score';
-import Posts from './components/Posts';
-import FollowersChart from './components/Chart/FollowersChart';
-import GenderChart from './components/Chart/GenderChart';
-import CountryChart from './components/Chart/CountryChart';
-import CityChart from './components/Chart/CityChart';
-import AgeGroupChart from './components/Chart/AgeGroupChart';
-import AgeSplitChart from './components/Chart/AgeSplitChart';
+import Score from '@/components/Score';
+import Posts from '@/components/Posts';
+import FollowersChart from '@/components/Chart/FollowersChart';
+import GenderChart from '@/components/Chart/GenderChart';
+import CountryChart from '@/components/Chart/CountryChart';
+import CityChart from '@/components/Chart/CityChart';
+import AgeGroupChart from '@/components/Chart/AgeGroupChart';
+import AgeSplitChart from '@/components/Chart/AgeSplitChart';
 
-function App() {
+
+
+export default function Home() {
   return (
     <>
       <Navbar />
@@ -25,12 +27,12 @@ function App() {
           <FollowersChart />
           <GenderChart />
           <div className='flex flex-col gap-5 lg:flex-row'>
-            <CityChart />
+            <CityChart/>
             <CountryChart />
           </div>
           <div className="flex flex-col items-stretch gap-5 lg:flex-row">
-            <AgeSplitChart />
-            <AgeGroupChart />
+            <AgeSplitChart/>
+            <AgeGroupChart/>
           </div>
 
 
@@ -43,7 +45,5 @@ function App() {
         </div>
       </div>
     </>
-  );
+  )
 }
-
-export default App;
